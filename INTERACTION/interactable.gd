@@ -1,11 +1,13 @@
 extends Area2D
 
 # This signal is sent out when the player interacts with the interactable
+signal interacted
+
+
 # This node should be a child of any interactable object
-# It's on layer 2 and it's mask is on layer 2, all interactions should be on layer 2, we can change that later though
+# It's on collision layer 2, and all interactions should be on layer 2
 # You should add a Shape2d to give it whatever shape necessary
 
-signal interacted
 
 func disable() -> void:
 	self.monitoring = false
